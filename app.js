@@ -66,7 +66,7 @@ app.delete("/tasks/:id", async (req, res) => {
   }
 });
 
-const server = app.listen(5000, "0.0.0.0", () => {
+const server = app.listen(process.env.PORT||5000, "0.0.0.0", () => {
   const host = server.address().address;
   const port = server.address().port;
   console.log(`server is listening at http://${host}:${port}`);
